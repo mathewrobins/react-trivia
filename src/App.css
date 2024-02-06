@@ -5,6 +5,27 @@
   text-align: center;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 20px; /* Adjust the space between cards */
+  row-gap: 20px;
+  padding: 20px; /* Padding around the entire grid */
+  justify-content: center; /* Center items in the container */
+}
+
+.card {
+  background-color: #4169E1;
+  box-shadow:0 4px 8px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  height: 300px;
+  width: 400px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
