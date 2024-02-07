@@ -10,9 +10,9 @@ function Question() {
 
   return (
     <div onClick={handleClick}>
-      Question
-      {/* {question}
-      {answer} */}
+      {!flipped && <div className="card">Question</div>}
+
+      {flipped && <div className="card-back">Answer</div>}
     </div>
   );
 }
