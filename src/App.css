@@ -14,7 +14,7 @@
   justify-content: center; /* Center items in the container */
 }
 
-.card {
+.card .card-back{
   background-color: #4169E1;
   box-shadow:0 4px 8px rgba(0,0,0,0.5);
   color: white;
@@ -26,6 +26,13 @@
   display: flex;
   flex-direction: column;
 }
+
+.card-back{
+  background-color: #b322a3;
+  cursor: pointer;
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
