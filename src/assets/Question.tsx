@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Question() {
+function Question({ question, answer }) {
   const [flipped, setFlipped] = useState(false);
 
   function handleClick() {
@@ -10,9 +10,9 @@ function Question() {
 
   return (
     <div onClick={handleClick}>
-      {!flipped && <div className="card">Question</div>}
+      {!flipped && <div className="card">{question}</div>}
 
-      {flipped && <div className="card-back">Answer</div>}
+      {flipped && <div className="card-back">{answer}</div>}
     </div>
   );
 }
