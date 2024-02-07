@@ -4,11 +4,24 @@ import Question from "./assets/Question";
 function App() {
   // const question = "Who are you?"
   // const answer = "Me"
-  const question = {
-    id: "1",
-    question: "What was the name of Hagrid's Norwegian Ridgeback dragon?",
-    answer: "Norbert",
-  };
+  const question = [
+    {
+      id: 1,
+      question: "What was the name of Hagrid's Norwegian Ridgeback dragon?",
+      answer: "Norbert",
+    },
+    {
+      id: 2,
+      question:
+        "Cho Chang played in which position in the Ravenclaw Quidditch team?",
+      answer: "Seeker",
+    },
+    {
+      id: 3,
+      question: "Who did Ron beat to become the Quidditch keeper?",
+      answer: "Cormac",
+    },
+  ];
 
   return (
     <>
@@ -16,9 +29,9 @@ function App() {
       <div>
         <div className="container">
           <Question
-            key={question.id}
-            question={question.question}
-            answer={question.answer}
+            key={question[1].id}
+            question={question[1].question}
+            answer={question[1].answer}
           />
         </div>
       </div>
