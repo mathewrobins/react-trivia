@@ -133,28 +133,32 @@ function App() {
 
   return (
     <>
-      <h1>Trivia Game</h1>
-        <div className="container">
-
+      <div className = "header">
+        <h1>Harry Potter Trivia Game</h1>
+        <p>Click on question to reveal answer</p>
+      </div>
+      <div className="container">
+        <div className = "top">
           <Question
             key={questions[index].id}
             question={questions[index].question}
             answer={questions[index].answer}
           />
-          <div className = "bottom">
- 
-              <Direction 
-                direction = "back" 
-                key = "back"
-                onClick = {()=>{ handleClick("back")}}
-              />
-              <Direction 
-                direction = "forward" 
-                key = "forward"
-                onClick = {()=>{ handleClick("forward")}}
-              />
-          </div>
         </div>
+        <div className = "bottom">
+
+            <Direction 
+              direction = "back" 
+              key = "back"
+              onClick = {()=>{ handleClick("back")}}
+            />
+            <Direction 
+              direction = "forward" 
+              key = "forward"
+              onClick = {()=>{ handleClick("forward")}}
+            />
+        </div>
+      </div>
     </>
   );
 }
