@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-function Question({ question, answer }) {
+interface Props {
+  question: string;
+  answer: string;
+}
+
+function Question(props: Props) {
   const [flipped, setFlipped] = useState(false);
 
   function handleClick() {
@@ -10,9 +15,9 @@ function Question({ question, answer }) {
 
   return (
     <div onClick={handleClick}>
-      {!flipped && <div className="card">{question}</div>}
+      {!flipped && <div className="card">{props.question}</div>}
 
-      {flipped && <div className="card-back">{answer}</div>}
+      {flipped && <div className="card-back">{props.answer}</div>}
     </div>
   );
 }
