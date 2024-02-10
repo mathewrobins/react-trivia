@@ -1,10 +1,10 @@
+import { useState } from "react";
 import "./App.css";
 import Question from "./assets/Question";
 
 function App() {
-  // const question = "Who are you?"
-  // const answer = "Me"
-  const question = [
+
+  const questions = [
     {
       id: 1,
       question: "What was the name of Hagrid's Norwegian Ridgeback dragon?",
@@ -108,18 +108,56 @@ function App() {
     }
   ];
 
+  // interface NavButtonProps {
+  //   direction: string;
+  // }
+
+  const numQuestions = questions.length
+  const [index, setIndex] = useState(0)
+
+  function handleClick(direction: string){
+    if (direction === "back"){
+      if (index > 0){
+        setIndex(index - 1);
+      }
+    }
+    if (direction === "forward"){
+      if (index < numQuestions){
+        setIndex(index + 1);
+      }
+    }
+    console.log(index);
+  }
+
+
   return (
     <>
       <h1>Trivia Game</h1>
-      <div>
         <div className="container">
+
           <Question
-            key={question[1].id}
-            question={question[1].question}
-            answer={question[1].answer}
+            key={questions[1].id}
+            question={questions[1].question}
+            answer={questions[1].answer}
           />
+          <div className = "bottom">
+            <button 
+              className = "nav-button"
+              key = "back"
+              onClick = {()=>{ handleClick("back")}}
+              >
+                 &lt; 
+              </button>
+              <button 
+                className = "nav-button"
+                key = "forward"
+                onClick = {()=>{ handleClick("forward")}}
+                >
+                  &gt; 
+              </button>
+
+          </div>
         </div>
-      </div>
     </>
   );
 }
