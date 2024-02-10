@@ -6,7 +6,7 @@ function Direction({ direction, onClick }: { direction: string; onClick: React.E
         className = "nav-button" 
         onClick={onClick}
       >
-        {direction === "forward" ? " next >" :  "< previous"}
+        {direction === "forward" ? "next >" :  "< previous"}
       </button>
     );
   }
