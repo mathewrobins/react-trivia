@@ -142,24 +142,17 @@ function App() {
             answer={questions[index].answer}
           />
           <div className = "bottom">
-            <button 
-              className = "nav-button"
-              key = "back"
-              onClick = {()=>{ handleClick("back")}}
-              >
-                 &lt; 
-              </button>
-              <button 
-                className = "nav-button"
+ 
+              <Direction 
+                direction = "back" 
+                key = "back"
+                onClick = {()=>{ handleClick("back")}}
+              />
+              <Direction 
+                direction = "forward" 
                 key = "forward"
                 onClick = {()=>{ handleClick("forward")}}
-                >
-                  &gt; 
-              </button>
-              <Direction direction = "back" />
-              <Direction direction = "forward" />
-
-
+              />
           </div>
         </div>
     </>
