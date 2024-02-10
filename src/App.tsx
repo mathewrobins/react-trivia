@@ -122,7 +122,7 @@ function App() {
       }
     }
     if (direction === "forward"){
-      if (index < numQuestions){
+      if (index < numQuestions-1){
         setIndex(index + 1);
       }
     }
@@ -136,9 +136,9 @@ function App() {
         <div className="container">
 
           <Question
-            key={questions[1].id}
-            question={questions[1].question}
-            answer={questions[1].answer}
+            key={questions[index].id}
+            question={questions[index].question}
+            answer={questions[index].answer}
           />
           <div className = "bottom">
             <button 
