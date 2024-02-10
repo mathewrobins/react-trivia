@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Question from "./assets/Question";
+import Direction from "./assets/Direction";
 
 function App() {
 
@@ -155,6 +156,9 @@ function App() {
                 >
                   &gt; 
               </button>
+              <Direction direction = "back" />
+              <Direction direction = "forward" />
+
 
           </div>
         </div>
